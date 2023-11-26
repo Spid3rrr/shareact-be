@@ -22,6 +22,7 @@ jobs:
     
   deploy:
     runs-on: ubuntu-22.04
+    needs: test
 
     steps:
       - name: Run the deployment script
@@ -29,7 +30,7 @@ jobs:
         with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.KEY }}
+            password: ${{ secrets.PASSWORD }}
             port: ${{ secrets.PORT }}
             script: |
                 ./shareact_be_deploy.sh
