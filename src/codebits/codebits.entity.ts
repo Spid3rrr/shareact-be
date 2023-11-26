@@ -10,4 +10,13 @@ export class Codebit {
 
   @Column()
   description: string;
+
+  @Column()
+  html: string;
+
+  @Column()
+  css: string;
+
+  @Column()
+  javascript: string;
 }

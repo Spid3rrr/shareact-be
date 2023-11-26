@@ -22,6 +22,9 @@ describe('CodebitsService', () => {
     const codebit = await service.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     expect(codebit).toBeDefined();
     expect(codebit.id).toBeDefined();
@@ -33,6 +36,9 @@ describe('CodebitsService', () => {
     await service.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const codebits = await service.findAll();
     expect(codebits).toBeDefined();
@@ -43,6 +49,9 @@ describe('CodebitsService', () => {
     const codebit = await service.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const found = await service.findOne(codebit.id);
     expect(found).toBeDefined();
@@ -53,10 +62,16 @@ describe('CodebitsService', () => {
     const codebit = await service.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const updated = await service.update(codebit.id, {
       title: 'updated',
       description: 'updated',
+      html: 'updated',
+      css: 'updated',
+      javascript: 'updated',
     });
     expect(updated).toBeDefined();
     expect(updated.id).toEqual(codebit.id);
@@ -68,6 +83,9 @@ describe('CodebitsService', () => {
     const codebit = await service.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const deleted = await service.delete(codebit.id);
     expect(deleted).toBeDefined();

@@ -25,6 +25,9 @@ describe('CodebitsController', () => {
     const codebit = await controller.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     expect(codebit).toBeDefined();
     expect(codebit.id).toBeDefined();
@@ -36,6 +39,9 @@ describe('CodebitsController', () => {
     await controller.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const codebits = await controller.findAll();
     expect(codebits).toBeDefined();
@@ -46,6 +52,9 @@ describe('CodebitsController', () => {
     const codebit = await controller.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const found = await controller.findOne(codebit.id);
     expect(found).toBeDefined();
@@ -56,21 +65,33 @@ describe('CodebitsController', () => {
     const codebit = await controller.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const updated = await controller.update(codebit.id, {
       title: 'updated',
       description: 'updated',
+      html: 'updated',
+      css: 'updated',
+      javascript: 'updated',
     });
     expect(updated).toBeDefined();
     expect(updated.id).toEqual(codebit.id);
     expect(updated.title).toEqual('updated');
     expect(updated.description).toEqual('updated');
+    expect(updated.html).toEqual('updated');
+    expect(updated.css).toEqual('updated');
+    expect(updated.javascript).toEqual('updated');
   });
 
   it('should delete a codebit', async () => {
     const codebit = await controller.create({
       title: 'test',
       description: 'test',
+      html: 'test',
+      css: 'test',
+      javascript: 'test',
     });
     const deleted = await controller.delete(codebit.id);
     expect(deleted).toBeDefined();
