@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CodebitsService } from '../../src/codebits/codebits.service';
-import { TypeOrmSQLITETestingModule } from 'src/utils/in-mem-test-db';
+import { TypeOrmSQLITETestingModule } from '../utils/in-mem-test-db';
 
 describe('CodebitsService', () => {
   let service: CodebitsService;

@@ -47,6 +47,7 @@ export class CodebitsService {
     if (!codebit) {
       throw new NotFoundException();
     }
-    return await this.codeBitsRepository.remove(codebit);
+    await this.codeBitsRepository.delete(codebit.id);
+    return codebit;
   }
 }

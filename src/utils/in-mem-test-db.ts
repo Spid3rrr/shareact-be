@@ -1,5 +1,5 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Codebit } from 'src/codebits/codebits.entity';
+import { Codebit } from '../codebits/codebits.entity';
 
 export const TypeOrmSQLITETestingModule = () => [
   TypeOrmModule.forRoot({
